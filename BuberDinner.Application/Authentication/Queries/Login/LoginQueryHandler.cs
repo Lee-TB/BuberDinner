@@ -6,7 +6,7 @@ using BuberDinner.Domain.Entities;
 using ErrorOr;
 using MediatR;
 
-namespace BuberDinner.Application.Authentication.Queries;
+namespace BuberDinner.Application.Authentication.Queries.Login;
 
 public class LoginQueryHandler : IRequestHandler<LoginQuery, ErrorOr<AuthenticationResult>>
 {
@@ -19,6 +19,7 @@ public class LoginQueryHandler : IRequestHandler<LoginQuery, ErrorOr<Authenticat
   }
   public async Task<ErrorOr<AuthenticationResult>> Handle(LoginQuery query, CancellationToken cancellationToken)
   {
+    await Task.CompletedTask;
     // 1. Validate the user exists
     var user = _userRepository.GetUserByEmail(query.Email);
     if (user is not User)

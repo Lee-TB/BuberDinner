@@ -1,0 +1,5 @@
+@host=http://localhost:5265
+@jwtToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NjZhMjg5ZC1hMTlhLTQzN2UtYmU4OC0xYzI5MGRhM2E5YjIiLCJnaXZlbl9uYW1lIjoiRHVjIiwiZmFtaWx5X25hbWUiOiJUcmFuIiwianRpIjoiZWVlMmVlY2YtMWRhMi00ZjQ1LTgwZmUtNzc4MjllN2RlOWEyIiwiZXhwIjoxNzIzNzA4NDQ5LCJpc3MiOiJCdWJlckRpbm5lciIsImF1ZCI6IkJ1YmVyRGlubmVyIn0.mr6-44n6rnIaH7qK1KtZOTymbCQwaQIHlY7W-Vv6Qvc
+GET {{host}}/dinners
+Content-Type: application/json
+Authorization: Bearer {{jwtToken}}
